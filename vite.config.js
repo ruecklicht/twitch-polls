@@ -12,8 +12,14 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'build'
+    outDir: 'package', // 'build'
+    lib: {
+      entry: fileURLToPath(new URL('./src/main.js', import.meta.url)),
+      fileName: 'twitch-polls',
+      formats: ['es']
+    },
   },
+  define: { 'process.env.NODE_ENV': '"production"' },
   server: {
     port: 3000,
     strictPort: true,
