@@ -1,11 +1,11 @@
 name: Release a new version
 
 # triggered manually
-on: 
+on:
   workflow_dispatch:
     inputs:
       releaseVersion:
-        description: 'Release Version (e.g. 4.2)'     
+        description: 'Release Version (e.g. 4.2)'
         required: true
 
 jobs:
@@ -44,6 +44,7 @@ jobs:
         with:
           name: vite-artifacts
           path: release
+      - run: sed 's/$RELEASEVERSION/${{ github.event.inputs.releaseVersion }}/g' resources/index.html > release/index.html
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Add generated files for release ${{ github.event.inputs.releaseVersion }}
