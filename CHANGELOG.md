@@ -1,12 +1,24 @@
 # Changelog
 
+<!--
+## [Template]
+
+### Features ✨
+
+### Bugfixes 🐛
+
+### Internal Changes 🏗️
+ -->
+
 ## [Unreleased]
 
-<!-- ### Features ✨ -->
+### Features ✨
 
-<!-- ### Bugfixes 🐛 -->
+- A new easy-to-update 'lightweight' mode of using the tool. This requires no build process for the users.
 
-<!-- ### Internal Changes 🏗️ -->
+### Internal Changes 🏗️
+
+- Automated build process for release artifacts (JS & CSS) on GitHub. These can be served via a CDN.
 
 ## [Version 2.1.1] - 2023-12-23
 
